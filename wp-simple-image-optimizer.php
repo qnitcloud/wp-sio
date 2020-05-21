@@ -16,7 +16,7 @@ function wp_simple_image_optimize($resized_file) {
    switch($orig_type) {
    case IMAGETYPE_JPEG:
       $image->stripImage();
-      $image->unsharpMaskImage("1","0.83","1.83","0");        
+      $image->unsharpMaskImage("1","0.83","1","0");        
       $image->setImageFormat("jpg");
       $image->SetColorspace(Imagick::COLORSPACE_RGB);
       $image->setImageCompression(Imagick::COMPRESSION_JPEG);
